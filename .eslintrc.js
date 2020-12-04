@@ -11,22 +11,13 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:unicorn/recommended'],
   rules: {
     'unicorn/no-reduce': 'off',
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        replacements: {
-          args: false,
-          err: {
-            error: false,
-          },
-        },
-      },
-    ],
+    'unicorn/prevent-abbreviations': 'off',
     'unicorn/catch-error-name': [
       'error',
       {
         name: 'err',
       },
     ],
+    'unicorn/consistent-function-scoping': 'off',
   },
 };
