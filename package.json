@@ -1,0 +1,24 @@
+{
+  "name": "@bigab/advent-of-code",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Just my 2020 AOC repo",
+  "main": "index.js",
+  "module": "main.js",
+  "scripts": {
+    "start": "node -r esm main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "line-reader": "^0.4.0",
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "esm": "^3.2.25",
+    "prettier": "^2.2.1"
+  }
+}
