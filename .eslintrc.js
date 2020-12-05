@@ -19,5 +19,6 @@ module.exports = {
       },
     ],
     'unicorn/consistent-function-scoping': 'off',
+    'unicorn/no-nested-ternary': 'off',
   },
 };

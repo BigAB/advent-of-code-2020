@@ -1,3 +1,5 @@
+export const pipe = (...fns) => (v) => fns.reduce((res, fn) => fn(res), v);
+
 export const sum = (...args) => args.reduce((t, v) => t + v);
 export const product = (...args) => args.reduce((t, v) => t * v);
 
