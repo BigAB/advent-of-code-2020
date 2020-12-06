@@ -2,7 +2,7 @@ import { tap, map } from 'rxjs/operators';
 import { setUp } from '../setup';
 import { countTreesBySlope } from './count-trees-by-slope';
 
-const DEBUG = true;
+const DEBUG = false;
 
 setUp((lines$) => {
   return lines$.pipe(

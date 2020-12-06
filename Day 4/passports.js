@@ -1,5 +1,6 @@
-import { bufferWhen, filter, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { testEach, exactDigits, inRange, isHex } from '../utils';
+import { bufferUntilBlank } from '../util-operators';
 
 // VALIDATION RULES
 // byr (Birth Year) - four digits; at least 1920 and at most 2002.
@@ -47,10 +48,8 @@ export const isValidPassport = (passport) =>
   hasAllFields(passport) && hasValidFieldValues(passport);
 
 export const inputToPassport = () => (lines$) => {
-  const blankLines$ = lines$.pipe(filter((line) => line === ''));
   return lines$.pipe(
-    filter((line) => line !== ''),
-    bufferWhen(() => blankLines$),
+    bufferUntilBlank(),
     map((info) =>
       info
         .join(' ')

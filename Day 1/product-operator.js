@@ -1,6 +1,6 @@
-import { findSetsOfSizeThatSumToTotal } from '../utils';
 import { map, take, scan, filter } from 'rxjs/operators';
 import { combineLatest } from 'rxjs';
+import { findSetsOfSizeThatSumToTotal } from '../utils';
 
 export const productOfNInputsThatTotal = (n, total) => (observable) => {
   const values$ = observable.pipe(map((line) => Number.parseInt(line)));

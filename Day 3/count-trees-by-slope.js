@@ -1,9 +1,10 @@
 import { map, reduce } from 'rxjs/operators';
 import { takeEveryNth } from '../util-operators';
+import { split } from '../utils';
 
 export const countTreesBySlope = (right, down) => (lines$) => {
   return lines$.pipe(
-    map((line) => line.split('')),
+    map(split),
     takeEveryNth(down),
     reduce(
       ({ x, count, rows }, row, index) => {
