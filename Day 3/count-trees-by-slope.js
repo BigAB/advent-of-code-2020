@@ -1,5 +1,5 @@
 import { map, reduce } from 'rxjs/operators';
-import { takeEveryNth } from '../util-operators';
+import { takeEveryNth } from '../utils/operators';
 import { split } from '../utils';
 
 export const countTreesBySlope = (right, down) => (lines$) => {

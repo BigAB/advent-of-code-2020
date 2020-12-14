@@ -1,6 +1,6 @@
 import { map } from 'rxjs/operators';
 import { testEach, exactDigits, inRange, isHex } from '../utils';
-import { bufferUntilBlank } from '../util-operators';
+import { bufferUntilBlank } from '../utils/operators';
 
 // VALIDATION RULES
 // byr (Birth Year) - four digits; at least 1920 and at most 2002.
